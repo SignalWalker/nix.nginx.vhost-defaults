@@ -20,9 +20,7 @@
       "inputs": {
         "fenix": "fenix",
         "flakeCompat": "flakeCompat",
-        "nixpkgs": [
-          "nixpkgs"
-        ]
+        "nixpkgs": "nixpkgs"
       },
       "locked": {
         "lastModified": 1719514321,
@@ -78,16 +76,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1727089097,
-        "narHash": "sha256-ZMHMThPsthhUREwDebXw7GX45bJnBCVbfnH1g5iuSPc=",
-        "owner": "NixOS",
+        "lastModified": 1668226844,
+        "narHash": "sha256-G/S4FBWDAqHeBS/hfXwUCJbnaKnrQFoeeKwzvZEOgxM=",
+        "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "568bfef547c14ca438c56a0bece08b8bb2b71a9c",
+        "rev": "dd4767bf613bf9553eee6ff37c0996b9c876e7d8",
         "type": "github"
       },
       "original": {
-        "owner": "NixOS",
-        "ref": "nixpkgs-unstable",
+        "owner": "nixos",
+        "ref": "nixos-unstable-small",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -95,8 +93,7 @@
     "root": {
       "inputs": {
         "ai-robots-txt": "ai-robots-txt",
-        "alejandra": "alejandra",
-        "nixpkgs": "nixpkgs"
+        "alejandra": "alejandra"
       }
     },
     "rust-analyzer-src": {

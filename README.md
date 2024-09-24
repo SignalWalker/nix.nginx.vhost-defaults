@@ -12,7 +12,6 @@ inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs";
     nginx-vhost-defaults = {
         url = "github:signalwalker/nix.nginx.vhost-defaults";
-        inputs.nixpkgs.follows = "nixpkgs";
     };
 };
 outputs = inputs @ {
