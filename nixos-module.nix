@@ -29,11 +29,12 @@ in {
       virtualHosts = mkOption {
         # type-merge the `virtualHosts` submodule so we can import `nginx.virtualHostDefaults` into every virtualHost
         type = types.attrsOf (types.submoduleWith {
+          # avoid conflict with default submodule declaration
+          shorthandOnlyDefinesConfig = true;
           modules = [
             nginx.virtualHostDefaults
             ({
               config,
-              pkgs,
               lib,
               ...
             }: {
@@ -58,11 +59,11 @@ in {
               };
               config = lib.mkMerge [
                 (lib.mkIf (config.blockAgents.enable && (length config.blockAgents.agents) > 0) {
-                  locations."=/robots.txt" = {
-                    alias = nginx.robotsTxt;
+                  locations."=/robots.txt" = lib.mkDefault {
+                    alias = mkRobotsTxt config.blockAgents.agents;
                   };
                   extraConfig = let
-                    agentRules = pkgs.lib.concatStringsSep "|" (map (lib.strings.escape regexEscapes) config.blockAgents.agents);
+                    agentRules = lib.concatStringsSep "|" (map (lib.strings.escape regexEscapes) config.blockAgents.agents);
                   in ''
                     if ($http_user_agent ~* "(${agentRules})") {
                       ${config.blockAgents.method};
