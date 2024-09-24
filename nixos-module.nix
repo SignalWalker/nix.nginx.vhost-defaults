@@ -45,7 +45,7 @@ in {
                     type = types.listOf types.str;
                     description = "User agent strings to block from accessing this virtual host.";
                     default = defaultBlockList;
-                    defaultText = "The user agent list from [github:ai-robots-txt/ai-robots-txt](https://github.com/ai-robots-txt/ai-robots-txt).";
+                    defaultText = "The user agent list from [github:ai-robots-txt/ai.robots.txt](https://github.com/ai-robots-txt/ai.robots.txt).";
                     example = ["Amazonbot" "AI2Bot" "Applebot"];
                   };
                   method = mkOption {

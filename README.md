@@ -46,7 +46,7 @@ outputs = inputs @ {
                 # Block a set of user agents from accessing any virtual host.
                 blockAgents = {
                     enable = true;
-                    # Use `lib.mkOptionDefault` if you want to preserve the default agent list, which includes all agents found in https://github.com/ai-robots-txt/ai-robots-txt
+                    # Use `lib.mkOptionDefault` if you want to preserve the default agent list, which includes all agents found in https://github.com/ai-robots-txt/ai.robots.txt
                     agents = lib.mkOptionDefault ["SemrushBot"];
                     # This is the default, which causes Nginx to drop the connection without any response.
                     method = "return 444";
@@ -56,4 +56,3 @@ outputs = inputs @ {
     };
 }
 ```
-
