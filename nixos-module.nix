@@ -48,6 +48,9 @@ in {
                     defaultText = "The user agent list from [github:ai-robots-txt/ai.robots.txt](https://github.com/ai-robots-txt/ai.robots.txt).";
                     example = ["Amazonbot" "AI2Bot" "Applebot"];
                   };
+                  robotsTxt = {
+                    enable = mkEnableOption "robots.txt";
+                  };
                   method = mkOption {
                     type = types.str;
                     description = "Method by which to block agents.";
@@ -59,7 +62,7 @@ in {
               };
               config = lib.mkMerge [
                 (lib.mkIf (config.blockAgents.enable && (length config.blockAgents.agents) > 0) {
-                  locations."=/robots.txt" = lib.mkDefault {
+                  locations."=/robots.txt" = lib.mkIf config.blockAgents.robotsTxt.enable {
                     alias = mkRobotsTxt config.blockAgents.agents;
                   };
                   extraConfig = let
@@ -82,3 +85,4 @@ in {
   config = {};
   meta = {};
 }
+
