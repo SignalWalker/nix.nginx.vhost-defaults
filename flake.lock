@@ -3,11 +3,11 @@
     "ai-robots-txt": {
       "flake": false,
       "locked": {
-        "lastModified": 1732034781,
-        "narHash": "sha256-0CSbe0aOH/COIG8djdk0P3f7IAlMOTn5AiQpZ+fsVtc=",
+        "lastModified": 1732409826,
+        "narHash": "sha256-bkNi5w01+QWRN3XZ1NBQrIFpAmOaL77EtJ7ppKu2xq0=",
         "owner": "ai-robots-txt",
         "repo": "ai.robots.txt",
-        "rev": "58985737e783aff099fc9dd06b895179d7833c34",
+        "rev": "609ddca39295d1ec8ec47bc4c1c609135bc238d3",
         "type": "github"
       },
       "original": {
@@ -23,11 +23,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1730773997,
-        "narHash": "sha256-nOo970Pm12BK1DH7hfS800i8mg5h8me1IxokGUKMgb8=",
+        "lastModified": 1732419807,
+        "narHash": "sha256-fxWG4fSgViAfBCYNr8V9w8uWfBpdXWT41ssNQGoHYck=",
         "owner": "kamadorueda",
         "repo": "alejandra",
-        "rev": "264e23546663a5676a77174cab31340a81aa2cc0",
+        "rev": "04fe4d17dc488744879008f9a8e5cb9affefa2ec",
         "type": "github"
       },
       "original": {
