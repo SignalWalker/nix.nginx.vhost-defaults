@@ -3,11 +3,11 @@
     "ai-robots-txt": {
       "flake": false,
       "locked": {
-        "lastModified": 1736222080,
-        "narHash": "sha256-zbpaty7IDxebNrv+ulCA0KybfX4ZRHlRkBPitpye+rA=",
+        "lastModified": 1738457570,
+        "narHash": "sha256-LcZhfskhOZYg0AkaSjNcvlHjXimdW3ju8oz3BABrTJk=",
         "owner": "ai-robots-txt",
         "repo": "ai.robots.txt",
-        "rev": "b7f908e30560a87c7bf45dc6cd5e132e25ab449e",
+        "rev": "bebffccc0ced8c420276c93f3109c2e71cd5ca0c",
         "type": "github"
       },
       "original": {
