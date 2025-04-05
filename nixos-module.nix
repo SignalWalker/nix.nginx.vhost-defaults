@@ -62,7 +62,7 @@ in {
               };
               config = lib.mkMerge [
                 (lib.mkIf (config.blockAgents.enable && (length config.blockAgents.agents) > 0) {
-                  locations."=/robots.txt" = lib.mkIf config.blockAgents.robotsTxt.enable {
+                  locations."= /robots.txt" = lib.mkIf config.blockAgents.robotsTxt.enable {
                     alias = mkRobotsTxt config.blockAgents.agents;
                   };
                   extraConfig = let
